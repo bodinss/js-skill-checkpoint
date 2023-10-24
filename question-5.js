@@ -1,8 +1,15 @@
 // Question 5: Calculating Total Price in User's Cart
 
-function calculateTotalPrice() {
-  // เริ่มเขียนโค้ดตรงนี้
+
+let totalPrice=0;
+
+function calculateTotalPrice(cart) {
+totalPrice = cart.reduce(function (accumulator,currentValue){
+return accumulator + currentValue.price * currentValue.quantity;
+}, 0)
+return  totalPrice
 }
+
 
 // ตัวอย่างการใช้งาน
 
@@ -13,3 +20,4 @@ const cart = [
 ];
 
 console.log(calculateTotalPrice(cart)); // ผลลัพธ์จากการ Execute ตัว Function จะต้องได้: 50
+

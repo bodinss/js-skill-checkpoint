@@ -10,4 +10,14 @@ const secondProductList = [
   { id: 4, name: "Headphones", price: 150 },
 ];
 
-// เริ่มเขียนโค้ดตรงนี้
+
+let newProductList =[]
+function arrayMerging(list) {
+  for (let i = 0; i < list.length; i++) {
+    newProductList =firstProductList.concat(list)
+  }
+  return newProductList
+}
+arrayMerging(secondProductList)
+console.log(newProductList)
+
